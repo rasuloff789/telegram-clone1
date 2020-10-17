@@ -5,14 +5,480 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>55-dars. Bootstrap. container va boshqa umumiy masalalar</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- <style>
+    #chat-item:active #mute { 
+      background-color: red;
+    }
+  </style> -->
 </head>
 <body>
- 
-  
-
-
+  <div class="container-fluid">
+    
+    <div class="w-25 p-2 position-relative overflow-scroll">
+      <input class="form form-control  bg-light" placeholder="Search" type="text" autocomplete="off" spellcheck="false" id="serch">
+      
+      <ul id="list" class="list list-group list-unstyled ">
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/id/871/60/60" srcset="https://picsum.photos/id/871/60/60 1x, https://picsum.photos/id/871/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate">Lorem, ipsum.</h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">6.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/id/872/60/60" srcset="https://picsum.photos/id/872/60/60 1x, https://picsum.photos/id/872/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">7.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">Beckham</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">6</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/id/873/60/60" srcset="https://picsum.photos/id/873/60/60 1x, https://picsum.photos/id/873/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">8.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <!-- <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p> -->
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">45</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/id/874/60/60" srcset="https://picsum.photos/id/874/60/60 1x, https://picsum.photos/id/874/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">11.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">Sherzod</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">3</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/id/875/60/60" srcset="https://picsum.photos/id/875/60/60 1x, https://picsum.photos/id/875/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Voy mani akaxonlariiiim </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">...typing</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">omad kelsa</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">9999</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/id/876/60/60" srcset="https://picsum.photos/id/876/60/60 1x, https://picsum.photos/id/876/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate">NT programmers</h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">tue</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">I love coding</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">1</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/id/877/60/60" srcset="https://picsum.photos/id/877/60/60 1x, https://picsum.photos/id/877/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Fullstack #2 </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.06.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">Abdulateef khan</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">78</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/id/870/60/60" srcset="https://picsum.photos/id/870/60/60 1x, https://picsum.photos/id/870/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate">Mayoq videodarslar</h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">17.10.20</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <!-- <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p> -->
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Uraaaa JS ni o'rganamiz :  )))))</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">0</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        <li class="chat-item d-flex mw-100 overflow-hidden px-2  align-items-center" id="chat-item"> 
+          <img class="rounded-circle mr-2 flex-shrink-0" src="https://picsum.photos/seed/picsum/60/60" srcset="https://picsum.photos/seed/picsum/60/60 1x, https://picsum.photos/seed/picsum/120/120 2x" width="60" height="60" >
+          <div class="overflow-hidden flex-grow-1 align-items-center">
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <h2 id="chatname" class="h4 mb-0 mw-100 flex-grow-1  text-truncate"> Lorem, ipsum. </h2>
+              <i id="mute" class="chat-mute material-icons d-none text-center text-secondary ">volume_off</i>
+              <i id="done" class="material-icons text-center text-success d-none">done_all</i>
+              <p id="time" class="text-center text-secondary p-1  mb-0">3.05.06</p>
+            </div>
+            
+            <div class="d-flex flex-grow-1 align-items-center mb-1">
+              <div class="flex-grow-1 overflow-hidden">
+                <p id="chat-author" class="h5 mb-1 mw-100  text-dark text-truncate ">you</p>
+                <p id="chat-text" class="h6 mb-0 mw-100  text-secondary text-truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+              <p class="rounded-pill text-center text-white py-2 px-3  mb-0 bg-info ml-1 chat-number">5</p>
+              <i id="pushpin" class=" material-icons text-center text-secondary border border-secondary ml-1 p-2 rounded-circle d-none">push_pin</i>
+            </div>
+          </div>
+        </li>
+        
+        
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+  <script>
+    const items = document.querySelectorAll(".chat-item");
+    
+    items.forEach((item) => {
+      let start = ``;
+      item.addEventListener("mousedown", () => {
+        start = new Date();
+      })
+      
+      item.addEventListener("mouseup", () => {
+        const finish = new Date();
+        const duration = finish - start;
+        
+        if (duration > 500) {
+          const chatNumbers = document.querySelectorAll('.chat-number');
+          chatNumbers.forEach((chatNumber , index ) => {
+            chatNumbers[index].classList.toggle('bg-secondary');
+            chatNumbers[index].classList.toggle('bg-info');
+          })
+          const chatMutes = document.querySelectorAll('.chat-mute');
+          chatMutes.forEach((chatMute , index ) => {
+            chatMutes[index].classList.toggle('d-none')
+          })
+        }
+      })
+    })
+  </script>
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/scripts.js"></script>

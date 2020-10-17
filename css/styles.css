@@ -22,3 +22,12 @@ img {
 h1 {
   font-weight: bold;
 }
+
+.list{
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.chat-item{
+  flex-shrink: 0;
+}
