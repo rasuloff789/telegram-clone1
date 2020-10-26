@@ -21,6 +21,16 @@ $(document).ready(function(){
   $("p").dblclick(function(){
     $("#pushpin").toggleClass('d-inline-block')
   });
+  $('.chat-item').children().each(function () {
+    $(this).attr('disabled', 'disabled');
+});
+
+
+$('.chat-item').children().attr('disabled', 'disabled');
+
+$('.chat-item').children().attr('disabled', true);
+
+$('.chat-item').children().attr('disabled', 'true');
 });
 
 
